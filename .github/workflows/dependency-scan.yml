@@ -6,6 +6,10 @@ on:
   schedule:
     - cron: "0 0 * * *"
 
+permissions:
+  contents: read
+  security-events: write
+
 jobs:
   dependency-scan:
     name: Scan Dependencies
@@ -26,6 +30,7 @@ jobs:
       - name: Upload Trivy fs scan results
         uses: github/codeql-action/upload-sarif@v3
         if: always()
+        continue-on-error: true
         with:
           sarif_file: "fs-trivy-results.sarif"
           category: "fs-scanning"
