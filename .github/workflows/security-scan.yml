@@ -1,4 +1,4 @@
-﻿name: Container Security Scan
+name: Container Security Scan
 
 on:
   push:

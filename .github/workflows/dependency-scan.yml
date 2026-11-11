@@ -1,4 +1,4 @@
-﻿name: Dependency Security Scan
+name: Dependency Security Scan
 
 on:
   push:
